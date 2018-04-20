@@ -3,6 +3,10 @@ import { render } from "react-dom";
 
 import "./main.scss";
 
+<<<<<<< HEAD
 import Technical from "./pages/Technical";
+=======
+import App from "./components/App";
+>>>>>>> develop
 
-render(<Technical />, document.getElementById("app"));
+render(<App />, document.getElementById("app"));
