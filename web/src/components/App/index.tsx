@@ -1,9 +1,17 @@
 import * as React from "react";
 import { render } from "react-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
+
+import Content from "../Content";
+import Toolbar from "../Toolbar";
+
+import About from "../../pages/About";
+import Home from "../../pages/Home";
+import NotFound from "../../pages/NotFound";
 
 import "./style.scss";
 
-export default class App extends React.Component<any, any> {
+class App extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
@@ -12,12 +20,18 @@ export default class App extends React.Component<any, any> {
 
     public render() {
         return (
-            <main>
-                <div>
-                    <h1>Метроном</h1>
-                    <p>...!!</p>
-                </div>
-            </main>
+            <section>
+                <Toolbar />
+                <Content>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/about" component={About} />
+                        <Route component={NotFound} />
+                    </Switch>
+                </Content>
+            </section>
         );
     }
 }
+
+export default withRouter(App);
