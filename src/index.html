@@ -6,11 +6,10 @@
         <meta name = "format-detection" content = "telephone=no" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Метроном</title>
-        <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="<%= htmlWebpackPlugin.files.favicon %>" rel="shortcut icon">
     </head>
     <body>
-        <div id="root">
+        <main id="app">
             <div id="cube-loader">
                 <div class="caption">
                 <div class="cube-loader">
@@ -21,6 +20,6 @@
                 </div>
                 </div>
             </div>
-        </div>
+        </main>
     </body>
 </html>

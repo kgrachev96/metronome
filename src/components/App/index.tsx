@@ -1,7 +1,7 @@
 import * as React from "react";
 import { render } from "react-dom";
 
-import "./main.scss";
+import "./style.scss";
 
 export default class App extends React.Component<any, any> {
 
@@ -12,7 +12,9 @@ export default class App extends React.Component<any, any> {
 
     public render() {
         return (
-            <main><h1>Привет!!!!</h1></main>
+            <main>
+                <div><h1>Привет!</h1></div>
+            </main>
         );
     }
 }

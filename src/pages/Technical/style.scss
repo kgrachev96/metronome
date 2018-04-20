@@ -1,0 +1,15 @@
+#technical_block {
+    padding: 15em 0;
+
+    .technical-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: auto;
+            width: 15em;
+        }
+    }
+}

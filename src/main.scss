@@ -3,7 +3,7 @@
 @function urls($url, $multiple) {
 
   $result: ();
-  $fontsBaseURL: '../../fonts/';
+  $fontsBaseURL: './fonts/';
 
   @if $multiple == true {
       @each $item in ('.ttf', '.eot', '.woff', '.svg') {
@@ -43,19 +43,16 @@
 
 html,
 body {
-  font-size: 16px;
-  background: #9f9f9f;
+  font-size: 1em;
+  background: #fff;
   font-family: "ProximaNova-Light", sans-serif;
   width: 100%;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
 }
-main {
-  background: #f5f5f5;
-}
 footer {
-  background: #9f9f9f;
+  background: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -117,6 +114,7 @@ h2 {
 @media (max-width: 767px) {
   h1 {
     font-size: 1.5em;
+    text-align: center;
   }
 }
 @media (max-width: 413px) {
@@ -139,6 +137,7 @@ p {
 @media (max-width: 767px) {
   p {
     font-size: 1.1em;
+    text-align: center;
   }
 
   main {

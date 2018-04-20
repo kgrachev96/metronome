@@ -44,12 +44,12 @@ const config = {
                                 minimize: isProduction
                             }
                         },
-                        'sass-loader',
-                        'resolve-url-loader'
+                        'resolve-url-loader',
+                        'sass-loader'
                     ]
                 })
             }, {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(gif|png|jpe?g|svg|ico)$/i,
                 use: [
                     {
                         loader: 'file-loader',
@@ -81,7 +81,8 @@ const config = {
     plugins: [
         extractSass,
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.html',
+            favicon: "./src/favicon/favicon.ico"
         })
     ],
     optimization: isProduction ? {

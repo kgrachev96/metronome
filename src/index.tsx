@@ -1,6 +1,9 @@
 import * as React from "react";
 import { render } from "react-dom";
 
-import App from "./components/App";
+import "./main.scss";
 
-render(<App />, document.getElementById("root"));
+import App from "./components/App";
+import Technical from "./pages/Technical";
+
+render(<Technical />, document.getElementById("app"));
