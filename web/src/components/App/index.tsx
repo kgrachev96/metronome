@@ -13,7 +13,10 @@ export default class App extends React.Component<any, any> {
     public render() {
         return (
             <main>
-                <div><h1>Привет!</h1></div>
+                <div>
+                    <h1>Метроном</h1>
+                    <p>...</p>
+                </div>
             </main>
         );
     }
