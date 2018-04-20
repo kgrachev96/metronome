@@ -15,7 +15,7 @@ export default class App extends React.Component<any, any> {
             <main>
                 <div>
                     <h1>Метроном</h1>
-                    <p>...</p>
+                    <p>...!!</p>
                 </div>
             </main>
         );
