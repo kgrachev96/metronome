@@ -46,8 +46,6 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "svg-loader": "0.0.2",
-    "svgo": "^1.0.5",
-    "svgo-loader": "^2.1.0",
     "ts-loader": "^4.2.0",
     "tslint": "^5.9.1",
     "tslint-react": "^3.5.1",
