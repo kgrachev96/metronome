@@ -1,51 +1,82 @@
 $white: #FFFFFF;
+$black: #000000;
 $silver: #DDDDDD;
 $silver-light: #F5F7F9;
 $text-color: #566B78;
 
 .header-content {
+
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media(max-width: 767px) {
+    & {
+      flex-direction: column;
+    }
+  }
+
     .toolbar-links {
     margin: 1rem 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
     list-style: none;
+
+    @media(max-width: 767px) {
+      & {
+        width: 100%;
+        justify-content: space-around;
+      }
+    }
+
+    @media(max-width: 413px) {
+      & {
+        flex-direction: column;
+      }
+    }
 
         li {
             a {
                 margin: 0 1rem;
-                color: $white;
+                color: $black;
                 text-decoration: none;
                 text-transform: uppercase;
                 display: flex;
                 align-items: flex-start;
+
+                @media(max-width: 767px) {
+                  & {
+                    margin: 0;
+                  }
+                }
+
+                @media(max-width: 413px) {
+                  & {
+                    margin: 0.5em;
+                  }
+                }
             }
         }
     }
 }
 
 header {
-  background-color: gray;
   line-height: 1.2;
-  padding: 8vw 2em;
   text-align: center;
   margin:0 auto;
-  max-width:95%;
   box-sizing:border-box;
-  padding:40px;
-  border-radius:5px; 
-  -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);        
-  box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45); 
   
   h1 {
-    color: $white;
+    color: $black;
     font-size: 2em;
   }
   
   a {
-    border: 2px solid $white;
-    color: $white;
+    border: 2px solid $black;
+    color: $black;
     border-radius: 4px;
     font-size: 0.8em;
     letter-spacing: 0.2em;
@@ -54,6 +85,12 @@ header {
     text-decoration: none;
     transition: none 200ms;
     transition-property: color, background, border;
+
+    @media(max-width: 767px) {
+      & {
+        padding: 1em;
+      }
+    }
     
     &:hover {
       border-color: red;
@@ -63,8 +100,6 @@ header {
 
 .tab--active {
     border-bottom: 2px solid red;
-    padding-top: 13px;
-    color: #ffffff;
     text-decoration: none;
 }
 
