@@ -14,11 +14,31 @@ $text-color: #566B78;
   @media(max-width: 767px) {
     & {
       flex-direction: column;
+      padding: 1em 0;
     }
   }
 
+    h1 {
+      margin: 0;
+
+      @media(max-width: 767px) {
+        margin-top: 0.5em;
+      }
+    }
+
+    .header-contact {
+      h1 {
+        color: #ab5a35;
+        font-size: 1.5em;
+      }
+
+      p {
+        color: gray
+      }
+    }
+
     .toolbar-links {
-    margin: 1rem 0;
+    margin: 2rem 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -41,11 +61,18 @@ $text-color: #566B78;
         li {
             a {
                 margin: 0 1rem;
-                color: $black;
+                padding: 1em 2em;
+                color: #ab5a35;
                 text-decoration: none;
                 text-transform: uppercase;
                 display: flex;
                 align-items: flex-start;
+
+                @media(max-width: 991px) {
+                  & {
+                    padding: 0;
+                  }
+                }
 
                 @media(max-width: 767px) {
                   & {
@@ -58,6 +85,10 @@ $text-color: #566B78;
                     margin: 0.5em;
                   }
                 }
+
+                &:hover {
+                  text-decoration: underline;
+                }
             }
         }
     }
@@ -66,49 +97,39 @@ $text-color: #566B78;
 header {
   line-height: 1.2;
   text-align: center;
-  margin:0 auto;
-  box-sizing:border-box;
+  margin: 0 auto;
+  box-sizing: border-box;
+  // position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #14272d;
+  background-color: white;
   
   h1 {
-    color: $black;
+    color: #341918;
     font-size: 2em;
   }
   
   a {
-    border: 2px solid $black;
-    color: $black;
+    color: #ab5a35;
     border-radius: 4px;
     font-size: 0.8em;
     letter-spacing: 0.2em;
-    padding: 1em 2em;
-    text-transform: uppercase;
     text-decoration: none;
     transition: none 200ms;
-    transition-property: color, background, border;
 
     @media(max-width: 767px) {
       & {
         padding: 1em;
       }
     }
-    
-    &:hover {
-      border-color: red;
-    }
   }
 }
 
 .tab--active {
-    border-bottom: 2px solid red;
     text-decoration: none;
 }
 
 
 h1, h2, strong {
   color: #333;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 50em;
 }
