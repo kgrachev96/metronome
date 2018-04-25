@@ -18,13 +18,17 @@ export default class Toolbar extends React.Component<any, any> {
                     <section className="header-container">
                         <div className="container">
                             <nav className="header-content">
-                                <h1>Метроном</h1>
+                                <ToolbarLink exact to="/" className="tab"><h1>Метроном</h1></ToolbarLink>
                                 <ul className="toolbar-links">
                                     <li><ToolbarLink exact to="/" className="tab">Главная</ToolbarLink></li>
-                                    <li><ToolbarLink to="/about" className="tab">О компании</ToolbarLink></li>
                                     <li><ToolbarLink to="/services" className="tab">Услуги</ToolbarLink></li>
+                                    <li><ToolbarLink to="/about" className="tab">О компании</ToolbarLink></li>
                                     <li><ToolbarLink to="/prices" className="tab">Цены</ToolbarLink></li>
                                 </ul>
+                                <div className="header-contact">
+                                    <h1>8 (123) 456-78-90</h1>
+                                    <p>мы вам перезвоним</p>
+                                </div>
                             </nav>
                         </div>
                     </section>

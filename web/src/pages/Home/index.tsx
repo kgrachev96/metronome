@@ -1,6 +1,8 @@
 import * as React from "react";
 
-import Slider from "../../components/Slider";
+// import Slider from "../../components/Slider";
+
+import MainTextSlider from "../../components/MainTextSlider";
 
 import * as first_slide from "../../images/1.jpg";
 import * as second_slide from "../../images/2.jpg";
@@ -31,7 +33,13 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* <Slider slides={slides} /> */}
+            <div className="middle-block">
+
+            </div>
+            <div className="q-block">
+
+            </div>
+            <MainTextSlider />
             {/* <div className="metronome-block">
                 <span className="circle-one">1</span>
                 <span className="circle-two">2</span>
