@@ -29,19 +29,39 @@
     overflow: hidden;
     height: 20vw;
     padding: 0;
+
+    @media(max-width: 992px) {
+      & {
+        height: 35vw;
+      }
+    }
+
+    @media(max-width: 767px) {
+      & {
+        height: 50vw;
+      }
+    }
   }
   
-  .leftArrow{
+  .leftArrow {
     bottom:20px;
     left:20px;
     position:absolute;
     z-index: 200;
     transition:all 0.2s ease-in-out;
-    color: rgba(160, 192, 255, 1);
-    &:hover{
-        color: rgba(160,192,255,0.5);
+    width: 128px;
+    height: auto;
+    cursor: pointer;
+
+    svg {
+      fill: rgba(160, 192, 255, 1);
+      transition:all 0.2s ease-in-out;
+
+      &:hover{
+        fill: rgba(160,192,255,0.5);
         transform: scale(1.1);
       }
+    }
   }
   
   .rightArrow{
@@ -50,10 +70,18 @@
     right:20px;    
     position: absolute;
     z-index: 200;
-  transition:all 0.2s ease-in-out;
-    color: rgba(160, 192, 255, 0.8);
-   &:hover{
-        color: rgba(160,192,255,0.5);
+    transition:all 0.2s ease-in-out;
+    width: 128px;
+    height: auto;
+    cursor: pointer;
+
+    svg {
+      fill: rgba(160, 192, 255, 1);
+      transition:all 0.2s ease-in-out;
+
+      &:hover{
+        fill: rgba(160,192,255,0.5);
         transform: scale(1.1);
       }
+    }
   }

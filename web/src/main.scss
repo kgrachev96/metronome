@@ -6,7 +6,7 @@
   $fontsBaseURL: './fonts/';
 
   @if $multiple == true {
-      @each $item in ('.ttf', '.eot', '.woff', '.svg') {
+      @each $item in ('.ttf', '.eot', '.woff') {
           $result: append($result, url('#{$fontsBaseURL}#{$url}#{$item}'), 'comma');
       }
 
@@ -41,15 +41,6 @@
   @include Font("ProximaNova-Regular", "ProximaNova-Regular", true);
 }
 
-main {   
-  margin: 1em;
-  box-sizing: border-box;
-  padding: 1em;
-  border-radius: 5px; 
-  background: RGBA(255,255,255,1);
-  -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);        
-  box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45); 
-}
 
 html,
 body {
@@ -190,6 +181,16 @@ b {
     width: 1195px;
   }
 }
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+@media (max-width: 991px) {
+  .container {
+      width: 750px;
+  }
+}
 @media(max-width: 767px) {
   .container {
     width: 414px;
@@ -199,6 +200,13 @@ b {
   .container {
     width: 320px;
   }
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /*loader*/
