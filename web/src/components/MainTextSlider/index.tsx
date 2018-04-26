@@ -1,10 +1,12 @@
 import * as React from "react";
 import Slider from "react-slick";
 
+import "./style.scss";
+
 export default class MainTextSlider extends React.Component {
     public render() {
         const settings = {
-            dots: true,
+            dots: false,
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -15,23 +17,29 @@ export default class MainTextSlider extends React.Component {
         return (
             <div>
                 <Slider {...settings}>
-                    <div>
-                        <h3>1</h3>
+                    <div className="slider-content">
+                        <h3>Бухгалтерский учёт</h3>
+                        <p>Много текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текста</p>
                     </div>
-                    <div>
-                        <h3>2</h3>
+                    <div className="slider-content">
+                        <h3>Аудит кампании</h3>
+                        <p>Много текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текста</p>
                     </div>
-                    <div>
-                        <h3>3</h3>
+                    <div className="slider-content">
+                        <h3>Управленческий учёт</h3>
+                        <p>Много текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текста</p>
                     </div>
-                    <div>
-                        <h3>4</h3>
+                    <div className="slider-content">
+                        <h3>Аутсорсинг</h3>
+                        <p>Много текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текста</p>
                     </div>
-                    <div>
-                        <h3>5</h3>
+                    <div className="slider-content">
+                        <h3>Что-то ещё</h3>
+                        <p>Много текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текста</p>
                     </div>
-                    <div>
-                        <h3>6</h3>
+                    <div className="slider-content">
+                        <h3>Что-то ещё</h3>
+                        <p>Много текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текстаМного текста</p>
                     </div>
                 </Slider>
             </div>

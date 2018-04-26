@@ -3,6 +3,8 @@ const argv = require('yargs').argv;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WebpackShellPlugin = require('webpack-shell-plugin');
 
 const isDevelopment = argv.mode === 'development';
 const isProduction = !isDevelopment;
@@ -12,6 +14,39 @@ const extractSass = new ExtractTextPlugin({
     filename: '[name].css',
     disable: isDevelopment
 });
+const htmlWebpack = new HtmlWebpackPlugin({
+    template: './src/index.html',
+});
+const faviconsWebpack = new FaviconsWebpackPlugin({
+    logo: './src/favicon/favicon.png',
+    prefix: 'favicons/',
+    emitStats: false,
+    statsFilename: 'iconstats-[hash].json',
+    persistentCache: true,
+    inject: true,
+    background: '#fff',
+    title: 'Метроном',
+
+    icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: true,
+        twitter: true,
+        yandex: true,
+        windows: true
+    }
+});
+const webpackShell = new WebpackShellPlugin({
+    onBuildExit: [
+        'cp ./.htaccess ./build/',
+        'cp ./src/images/og-image.jpg ./build/assets/images/',
+    ]
+});
+
 const config = {
     entry: {
         main: './src/index.tsx'
@@ -49,7 +84,7 @@ const config = {
                     ]
                 })
             }, {
-                test: /\.(gif|png|jpe?g|svg|ico)$/i,
+                test: /\.(gif|jpg|png|jpe?g|svg|ico)$/i,
                 use: [
                     {
                         loader: 'file-loader',
@@ -78,13 +113,16 @@ const config = {
                 },
             }]
     },
-    plugins: [
+    plugins: isProduction ? [
         extractSass,
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            favicon: "./src/favicon/favicon.ico"
-        })
-    ],
+        htmlWebpack,
+        faviconsWebpack,
+        webpackShell
+    ] : [
+            extractSass,
+            htmlWebpack,
+            faviconsWebpack
+        ],
     optimization: isProduction ? {
         minimizer: [
             new UglifyJsPlugin({

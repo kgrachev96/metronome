@@ -1,0 +1,24 @@
+.slick-slide:active, .slick-slide:focus {
+    outline: none;
+  }
+  .slick-slide::-moz-focus-inner {
+    border: 0;
+  }
+
+.slider-content {
+    padding: 5em 0;
+    cursor: move;
+
+    h3 {
+        color: #2e2e2e;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+
+    p {
+        line-height: 2;
+        color: gray;
+        text-align: center;
+    }
+}
