@@ -5,20 +5,35 @@
     border: 0;
   }
 
-.slider-content {
-    padding: 5em 0;
-    cursor: move;
+.slider-block {
+    .slider-content {
+        padding: 3em 0;
+        cursor: move;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        outline-width: 0;
+        outline: none;
 
-    h3 {
-        color: #2e2e2e;
-        font-size: 2em;
-        margin-bottom: 0.5em;
-        text-align: center;
-    }
+        .slider-text {
+            padding: 0 1em;
 
-    p {
-        line-height: 2;
-        color: gray;
-        text-align: center;
+            h1 {
+                color: #2e2e2e;
+                font-size: 2em;
+                margin: 0;
+                margin-bottom: 0.5em;
+                text-align: center;
+            }
+    
+            p {
+                line-height: 2;
+                color: gray;
+                text-align: center;
+                font-size: 1.4em;
+                
+            }
+        }
     }
 }

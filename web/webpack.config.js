@@ -83,7 +83,20 @@ const config = {
                         'sass-loader'
                     ]
                 })
-            }, {
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            minimize: isProduction
+                        }
+                    }
+                ],
+            },
+            {
                 test: /\.(gif|jpg|png|jpe?g|svg|ico)$/i,
                 use: [
                     {

@@ -92,12 +92,15 @@ $tick-color: #333333;
 
 .main-page {
   .up-block {
-    background-color: #c1dee7;
+    //c1dee7
+    //f4f7f6
+    background-color: #eeebe7;
     background-size: cover;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid #8d7361;
 
     .up-block-content {
       display: flex;
@@ -116,7 +119,7 @@ $tick-color: #333333;
 
       p {
         font-size: 2em;
-        color: #ab5a35;
+        color: #8d7361;
         text-align: left;
       }
 
