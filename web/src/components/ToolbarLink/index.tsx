@@ -1,15 +1,25 @@
 import * as React from "react";
-import { HashRouter, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default class ToolbarLink extends React.Component<any, any> {
-
-    constructor(props: any) {
-        super(props);
-    }
-
     public render() {
+        const menuLinks = [
+            { to: "/", text: "Главная" },
+            { to: "/services", text: "Услуги" },
+            { to: "/about", text: "О компании" },
+            { to: "/prices", text: "Цены" },
+        ];
         return (
-            <NavLink to="" activeClassName="tab--active" {...this.props}>{this.props.children}</NavLink>
+            <div className="toolbar-links">
+                {menuLinks.map((menuLink, i): any => {
+                    return (
+                        <NavLink key={i} to={menuLink.to} className="tab">
+                            {menuLink.text}
+                        </NavLink>
+                    );
+                })
+                }
+            </div>
         );
     }
 }
