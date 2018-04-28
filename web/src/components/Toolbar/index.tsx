@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import { HashRouter, NavLink } from "react-router-dom";
+import { HashRouter, NavLink, withRouter } from "react-router-dom";
 
 import ToolbarLink from "../ToolbarLink";
 
@@ -9,7 +9,7 @@ import * as logo_new from "../../images/logo_new@2x.png";
 
 import "./style.scss";
 
-export default class Toolbar extends React.Component<any, any> {
+class Toolbar extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
@@ -17,8 +17,12 @@ export default class Toolbar extends React.Component<any, any> {
         this.state = {
             windowWidth: window.innerWidth,
             mobileNavVisible: false,
-            menuExpanded: false,
+            route: window.location.hash.substr(1),
         };
+
+        this.props.history.listen((location: any, action: any) => {
+            this.state.route !== location.pathname ? this.setState({ mobileNavVisible: false }) : null;
+        });
 
         this.handleResize = this.handleResize.bind(this);
         this.handleNavClick = this.handleNavClick.bind(this);
@@ -26,6 +30,11 @@ export default class Toolbar extends React.Component<any, any> {
 
     public componentDidMount() {
         window.addEventListener("resize", this.handleResize);
+        window.addEventListener('hashchange', () => {
+            this.setState({
+                route: window.location.hash.substr(1)
+            });
+        });
     };
 
     public componentWillUnmount() {
@@ -56,6 +65,7 @@ export default class Toolbar extends React.Component<any, any> {
                                     (
                                         <div className="mobile_nav" >
                                             <span className="menu-icon-toggle" onClick={this.handleNavClick}><span></span></span>
+                                            <div className="overlayClose" onClick={() => this.setState({ mobileNavVisible: false })}></div>
                                             <ReactCSSTransitionGroup
                                                 transitionName="example"
                                                 transitionEnterTimeout={500}
@@ -79,3 +89,5 @@ export default class Toolbar extends React.Component<any, any> {
         );
     }
 }
+
+export default withRouter(Toolbar);
