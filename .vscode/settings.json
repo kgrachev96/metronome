@@ -1,3 +1,22 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "editor.fontSize": 18,
+    "editor.folding": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.lineHeight": 26,
+    "editor.lineNumbers": "off",
+    "editor.matchBrackets": false,
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderIndentGuides": false,
+    "editor.renderLineHighlight": "none",
+    "editor.scrollbar.horizontal": "hidden",
+    "explorer.openEditors.visible": 0,
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": null,
+    "workbench.editor.showIcons": false,
+    "workbench.statusBar.visible": false,
 }

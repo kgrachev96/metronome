@@ -6,6 +6,7 @@
   }
 
 .slider-block {
+    border-bottom: solid 1px #eaeaea;
     .slider-content {
         padding: 3em 0;
         cursor: move;
@@ -19,8 +20,7 @@
         .slider-text {
             padding: 0 1em;
 
-            h1 {
-                color: #2e2e2e;
+            h2 {
                 font-size: 2em;
                 margin: 0;
                 margin-bottom: 0.5em;
@@ -29,7 +29,6 @@
     
             p {
                 line-height: 2;
-                color: gray;
                 text-align: center;
                 font-size: 1.4em;
                 

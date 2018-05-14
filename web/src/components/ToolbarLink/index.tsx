@@ -7,7 +7,6 @@ export default class ToolbarLink extends React.Component<any, any> {
             { to: "/", text: "Главная" },
             { to: "/services", text: "Услуги" },
             { to: "/about", text: "О компании" },
-            { to: "/prices", text: "Цены" },
         ];
         return (
             <div className="toolbar-links">
