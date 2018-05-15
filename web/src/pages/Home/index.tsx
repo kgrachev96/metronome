@@ -48,7 +48,7 @@ export default function Home() {
                     <div className="middle-content">
                         <div className="middle-text">
                             <h2>Услуги</h2>
-                            <p>Ipsum quis semper consequat, sem nibh mattis arcu, quis porttitor lorem justo in tellus. Aenean lacinia
+                            <p>Ipsuma quis semper consequat, sem nibh mattis arcu, quis porttitor lorem justo in tellus. Aenean lacinia
 <br />interdum nisl felis et dui viverra, nec accumsan tempus quam ultricies.</p>
                         </div>
 

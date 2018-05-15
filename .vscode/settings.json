@@ -11,12 +11,11 @@
     "editor.overviewRulerBorder": false,
     "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
-    "editor.scrollbar.horizontal": "hidden",
     "explorer.openEditors.visible": 0,
     "window.zoomLevel": 0,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": null,
     "workbench.editor.showIcons": false,
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true
 }
